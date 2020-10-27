@@ -1,7 +1,7 @@
 {
-  "name": "eth-block-tracker",
+  "name": "@fksyuan/eth-block-tracker",
   "version": "4.4.3",
-  "description": "A block tracker for the Ethereum blockchain. Keeps track of the latest block.",
+  "description": "A block tracker for the PlatON blockchain. Keeps track of the latest block.",
   "main": "src/polling.js",
   "scripts": {
     "lint": "eslint --ext .js .",
@@ -49,10 +49,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MetaMask/eth-block-tracker.git"
+    "url": "git+https://github.com/fksyuan/eth-block-tracker.git"
   },
   "bugs": {
-    "url": "https://github.com/MetaMask/eth-block-tracker/issues"
+    "url": "https://github.com/fksyuan/eth-block-tracker/issues"
   },
-  "homepage": "https://github.com/MetaMask/eth-block-tracker#readme"
+  "homepage": "https://github.com/fksyuan/eth-block-tracker#readme"
 }

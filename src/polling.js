@@ -11,8 +11,8 @@ class PollingBlockTracker extends BaseBlockTracker {
     if (!opts.provider) {
       throw new Error('PollingBlockTracker - no provider specified.')
     }
-    const pollingInterval = opts.pollingInterval || 20 * sec
-    const retryTimeout = opts.retryTimeout || pollingInterval / 10
+    const pollingInterval = opts.pollingInterval || 5 * sec
+    const retryTimeout = opts.retryTimeout || pollingInterval
     const keepEventLoopActive = opts.keepEventLoopActive === undefined ? true : opts.keepEventLoopActive
     const setSkipCacheFlag = opts.setSkipCacheFlag || false
     // BaseBlockTracker constructor
@@ -69,7 +69,7 @@ class PollingBlockTracker extends BaseBlockTracker {
   }
 
   async _fetchLatestBlock () {
-    const req = { jsonrpc: '2.0', id: createRandomId(), method: 'eth_blockNumber', params: [] }
+    const req = { jsonrpc: '2.0', id: createRandomId(), method: 'platon_blockNumber', params: [] }
     if (this._setSkipCacheFlag) {
       req.skipCache = true
     }
